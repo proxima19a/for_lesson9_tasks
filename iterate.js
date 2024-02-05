@@ -65,3 +65,26 @@ const sum=salariesOfDevelopers.reduce((acc,salary,index,array)=>{
 },0);
 console.log('sum',sum);
 
+//sort
+
+salariesOfDevelopers.sort((a,b)=> {
+    return a-b; // по возрастанию
+    //return b-a;  //по убыванию
+});
+console.log('salariesOfDevelopers',salariesOfDevelopers);
+
+developerNames.sort();
+console.log('developerNames',developerNames); // по возрастанию
+
+developerNames.sort((a,b) => {
+    if (a<b) {
+        return 1;
+    }
+    if (a>b) {
+        return -1;
+    }
+
+    return 0;
+});
+
+console.log('developerNames',developerNames); //по убыванию
